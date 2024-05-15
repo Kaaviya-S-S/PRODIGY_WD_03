@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>TIC-TAC-TOE GAME</h2>
+
+        <div class="choice">
+            <p>Choose the mode of game:</p>
+        </div>
+        <div class="vs-button">
+            <button id="twoPlayers">2 players</button>
+            <button id="vsComputer">vs-Computer</button>
+        </div>
+
+        <div class="game-section two-players" style="display: none;">
+            <h3>Player 1 = X || Player 2 = O</h3>
+            <div class="game-board">
+                <div class="row">
+                    <div class="cell" onclick="twoPMakeMove(0, 0)"></div>
+                    <div class="cell" onclick="twoPMakeMove(0, 1)"></div>
+                    <div class="cell" onclick="twoPMakeMove(0, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="twoPMakeMove(1, 0)"></div>
+                    <div class="cell" onclick="twoPMakeMove(1, 1)"></div>
+                    <div class="cell" onclick="twoPMakeMove(1, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="twoPMakeMove(2, 0)"></div>
+                    <div class="cell" onclick="twoPMakeMove(2, 1)"></div>
+                    <div class="cell" onclick="twoPMakeMove(2, 2)"></div>
+                </div>
+            </div>
+            <p class="winner-text" id="twoPlayersWinnerText"></p>
+        </div>
+
+        <div class="game-section vs-computer" style="display: none;">
+            <h3>Player = X || Computer = O</h3>
+            <div class="game-board">
+                <div class="row">
+                    <div class="cell" onclick="vsCompMakeMove(0, 0)"></div>
+                    <div class="cell" onclick="vsCompMakeMove(0, 1)"></div>
+                    <div class="cell" onclick="vsCompMakeMove(0, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="vsCompMakeMove(1, 0)"></div>
+                    <div class="cell" onclick="vsCompMakeMove(1, 1)"></div>
+                    <div class="cell" onclick="vsCompMakeMove(1, 2)"></div>
+                </div>
+                <div class="row">
+                    <div class="cell" onclick="vsCompMakeMove(2, 0)"></div>
+                    <div class="cell" onclick="vsCompMakeMove(2, 1)"></div>
+                    <div class="cell" onclick="vsCompMakeMove(2, 2)"></div>
+                </div>
+            </div>
+            <p class="winner-text" id="vsComputerWinnerText"></p>
+        </div>
+
+        <button id="restartButton" onclick="resetBoard()" style="display: none;">Restart Game</button>
+
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
